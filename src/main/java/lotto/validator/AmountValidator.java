@@ -10,16 +10,9 @@ public class AmountValidator {
     }
 
     public static void validate(String input){
-        validateNull(input);
         validateNotInteger(input);
         validateBelowLottoPrice(input);
         validateNotDivisibleByLottoPrice(input);
-    }
-
-    private static void validateNull(String input){
-        if(input.isBlank()){
-            throw new IllegalArgumentException(ErrorMessage.NULL_ERROR.getMessage());
-        }
     }
 
     private static void validateNotInteger(String input){
