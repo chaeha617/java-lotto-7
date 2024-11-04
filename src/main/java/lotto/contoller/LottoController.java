@@ -14,7 +14,10 @@ public class LottoController {
 
     private Lottos getLottos(int Amount){
         LottoMachine lottoMachine = new LottoMachine(Amount);
-        return lottoMachine.createLottos();
+        Lottos lottos = lottoMachine.createLottos();
+        OutputView.printLottoCount(lottos.size());
+        OutputView.printLottos(lottos);
+        return lottos;
     }
 
 
