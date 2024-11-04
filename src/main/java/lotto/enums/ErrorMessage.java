@@ -31,7 +31,15 @@ public enum ErrorMessage {
         + LottoConfig.LOTTO_NUMBER_COUNT.getValue()
         + "개여야 합니다."
         ),
-    LOTTO_NUMBERS_DUPLICATE("로또 번호는 중복될 수 없습니다.");
+    LOTTO_NUMBERS_DUPLICATE("로또 번호는 중복될 수 없습니다."),
+    BONUS_NUMBER_ONLY_INTEGER("보너스 번호는 정수여야 합니다."),
+    BONUS_NUMBER_OUT_OF_RANGE("보너스 번호는"
+            + LottoConfig.LOTTO_MIN_NUMBER.getValue()
+            + "~"
+            + LottoConfig.LOTTO_MAX_NUMBER.getValue()
+            +"사이의 값이여야 합니다."
+    ),
+    BONUS_NUMBER_DUPLICATE("당첨 번호와 보너스 번호는 중복 될 수 없습니다.");
 
 
 

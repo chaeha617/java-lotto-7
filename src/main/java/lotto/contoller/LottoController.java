@@ -28,5 +28,9 @@ public class LottoController {
         return new Lotto(input);
     }
 
+    private int getBonusNumber(Lotto winningLotto){
+        OutputView.printBonusNumberInputMessage();
+        return Integer.parseInt(InputView.inputBonusNumber(winningLotto));
+    }
 
 }
