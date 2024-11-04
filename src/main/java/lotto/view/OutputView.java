@@ -1,5 +1,6 @@
 package lotto.view;
 
+import lotto.domain.Lottos;
 import lotto.enums.LottoConfig;
 
 public class OutputView {
@@ -10,4 +11,11 @@ public class OutputView {
 
     public static void printAmountInputMessage(){ System.out.println(INPUT_AMOUNT); }
 
+    public static void printLottoCount(int lottoCount){
+        System.out.println(lottoCount + "개를 구매했습니다.");
+    }
+
+    public static void printLottos(Lottos lottos){
+        System.out.println(lottos.toString());
+    }
 }
