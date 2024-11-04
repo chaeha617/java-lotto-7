@@ -28,4 +28,5 @@ public class LottoController {
         return new Lotto(input);
     }
 
+
 }
