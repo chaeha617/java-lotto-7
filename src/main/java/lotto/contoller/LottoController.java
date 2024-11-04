@@ -1,5 +1,6 @@
 package lotto.contoller;
 
+import lotto.domain.Lotto;
 import lotto.domain.LottoMachine;
 import lotto.domain.LottoResult;
 import lotto.domain.Lottos;
@@ -21,10 +22,10 @@ public class LottoController {
         return lottos;
     }
 
-    private int getWinningLotto(){
+    private Lotto getWinningLotto(){
         OutputView.printWinningLottoInputMessage();
-        return Integer.parseInt(InputView.inputWinningLotto());
+        String input = InputView.inputWinningLotto();
+        return new Lotto(input);
     }
-
 
 }
