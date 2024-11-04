@@ -30,6 +30,12 @@ public class Lotto {
         return numbers.contains(number);
     }
 
+    public int countMatchingNumbers(Lotto other) {
+        return (int) numbers.stream()
+                .filter(other.numbers::contains)
+                .count();
+    }
+
     @Override
     public String toString(){
         return numbers.toString();

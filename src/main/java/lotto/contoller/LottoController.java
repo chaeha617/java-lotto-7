@@ -9,6 +9,14 @@ import lotto.view.OutputView;
 
 public class LottoController {
 
+    public void run(){
+        int amount = getAmount();
+        Lottos lottos =  getLottos(amount);
+        Lotto winningLotto = getWinningLotto();
+        int bonusNumber = getBonusNumber(winningLotto);
+        getLottoResult(lottos, winningLotto, bonusNumber);
+    }
+
     private int getAmount(){
         OutputView.printAmountInputMessage();
         return Integer.parseInt(InputView.inputAmount());
@@ -32,5 +40,13 @@ public class LottoController {
         OutputView.printBonusNumberInputMessage();
         return Integer.parseInt(InputView.inputBonusNumber(winningLotto));
     }
+
+    private void getLottoResult(Lottos lottos, Lotto winningLotto, int bonusNumber){
+        LottoResult lottoResult = new LottoResult(winningLotto, bonusNumber);
+        lottoResult.createLottoResult(lottos);
+        OutputView.printLottoResult(lottoResult.toString());
+        OutputView.printPropit(lottoResult.getProfit());
+    }
+
 
 }

@@ -23,5 +23,9 @@ public class OutputView {
 
     public static void printBonusNumberInputMessage(){ System.out.println(INPUT_BONUS_NUMBER); }
 
+    public static void printLottoResult(String lottoResult){ System.out.println(lottoResult);}
+
+    public static void printPropit(String propit){ System.out.println(propit);}
+
 
 }
